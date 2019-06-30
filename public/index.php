@@ -1,5 +1,8 @@
-<?php require_once ('html/header.php') ?>
-
+<?php require_once('html/header.php') ?>
+<?php require_once('startup.php'); ?>
+<?php
+	$files = get_files();
+?>
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 
 	<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
@@ -22,6 +25,18 @@
 
 				<button type="submit" class="btn btn-primary">Submit</button>
 			</form>
+		</div>
+		<div class="col-md-2 offset-md-1">
+			<p>Existing files<br />
+				<small>refresh page after each generation</small>
+			</p>
+			<ul>
+				<?php foreach($files as $file): ?>
+					<li>
+						<a target="_blank" href="./files/<?=$file?>"><?=$file; ?></a>
+					</li>
+				<?php endforeach; ?>
+			</ul>
 		</div>
 	</div>
 

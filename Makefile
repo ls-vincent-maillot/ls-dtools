@@ -7,6 +7,6 @@ up:
 down:
 	docker-compose down
 
-clean:
-	docker rm -f `docker ps -a -q`
+clean-files:
+	rm -r ./public/files/*.csv
 
