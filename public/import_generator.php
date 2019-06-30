@@ -205,8 +205,18 @@ class ImportGen
 $generator = new ImportGen();
 $data = $generator->generate(intval($_POST['rows']));
 
+function write_file(string $filename, string $data)
+{
+	$directory = "./files/";
+	$handle = fopen($directory . $filename, 'w+');
+	fputs($handle, $data);
+	fclose($handle);
+}
 
+$filename = uniqid()."_import_data_{$rows}_rows.csv";
+
+write_file($filename, $data);
 header('Content-type: text/csv');
-header("Content-Disposition: attachment; filename=import_data_{$rows}_rows.csv");
+header("Content-Disposition: attachment; filename={$filename}");
 
 echo $data;
