@@ -10,7 +10,7 @@ cd ./ls-dtools
 make build
 ```
 Make build will bring your container up automatically.  
-Visit http://localhost:8080 and you should be good to go
+Visit http://localhost:7331 and you should be good to go
 
 #### Tools
 * * *

@@ -8,6 +8,6 @@ services:
     image: ls-dtools:latest
     container_name: ls-dtools
     ports:
-      - 8080:80
+      - 7331:80
     volumes:
       - .:/web/app

@@ -8,6 +8,11 @@
 
 	<div class="row">
 		<div class="col-md-6">
+			<p>
+				This generator is very simple. I will generate 50/50 items and matrix items. <br />
+				Each row is going to be unique.
+			</p>
+			<hr />
 			<form method="POST" action="import_generator.php">
 				<div class="form-group">
 					<label for="exampleInputEmail1">Number of rows</label>
