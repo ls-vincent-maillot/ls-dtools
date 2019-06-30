@@ -27,7 +27,7 @@
 			overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 		}
 	</style>
-	<title>Hello, world!</title>
+	<title>Lightspeed Development tools</title>
 </head>
 <body>
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">

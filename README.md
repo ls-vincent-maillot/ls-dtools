@@ -1,8 +1,8 @@
-#LS-DTools
+# LS-DTools
 
 This will be a repository with a bunch of tools for anything related to development at Lightspeed.
 
-###Getting started
+### Getting started
 * * *
 ```
 git clone https://github.com/ls-lucas-krupa/ls-dtools.git
