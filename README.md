@@ -2,6 +2,8 @@
 
 This will be a repository with a bunch of tools for anything related to development at Lightspeed.
 
+The code currently is in a messy state. Not to be taken as example.
+
 ### Getting started
 * * *
 ```
@@ -9,8 +11,8 @@ git clone https://github.com/ls-lucas-krupa/ls-dtools.git
 cd ./ls-dtools
 make build
 ```
-Make build will bring your container up automatically.  
-Visit http://localhost:7331 and you should be good to go
+Make build will bring your container up automatically and open up the page
+in your default browser.
 
 #### Tools
 * * *
