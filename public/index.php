@@ -26,10 +26,14 @@
 				<button type="submit" class="btn btn-primary">Submit</button>
 			</form>
 		</div>
-		<div class="col-md-2 offset-md-1">
+		<div class="col-md-4 offset-md-1">
 			<p>Existing files<br />
 				<small>refresh page after each generation</small>
 			</p>
+			<p>
+				To delete files generated. Run : <code>make clean-files</code>
+			</p>
+
 			<ul>
 				<?php foreach($files as $file): ?>
 					<li>
