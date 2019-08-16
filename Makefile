@@ -1,5 +1,6 @@
 build:
-	docker-compose up --build -d
+	docker-compose up --build -d \
+	&& open http://127.0.0.1:7331
 
 up:
 	docker-compose up --force-recreate -V -d \

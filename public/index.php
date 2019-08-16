@@ -12,7 +12,7 @@
 	<div class="row">
 		<div class="col-md-6">
 			<p>
-				This generator is very simple. It will generate 50/50 items and matrix items. <br />
+				This generator is very simple. It will generate 50% items and 50% matrix items. <br />
 				Each row is going to be unique.
 			</p>
 			<hr />
