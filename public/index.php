@@ -19,7 +19,7 @@
 			<form method="POST" action="import_generator.php">
 				<div class="form-group">
 					<label for="exampleInputEmail1">Number of rows</label>
-					<input type="number" max="1000" min="2" class="form-control" id="rows" name="rows" placeholder="2-1000">
+					<input type="number" max="10000" min="2" class="form-control" id="rows" name="rows" placeholder="2-10000">
 					<small id="rows-help" class="form-text text-muted">How many rows do you want in your import file</small>
 				</div>
 
