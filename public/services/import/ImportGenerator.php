@@ -96,7 +96,7 @@ class ImportGenerator
 		{
 			foreach ($inventory_keys as $key)
 			{
-				$headers[$key] = self::TYPE_NUMBER;
+				$headers["Shop ".$key] = self::TYPE_NUMBER;
 			}
 		}
 		
