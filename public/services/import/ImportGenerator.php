@@ -81,7 +81,7 @@ class ImportGenerator
 			'Reorder Point',
 			'Reorder Level',
 		];
-		if (count($shops) > 0)
+		if (count($shops) > 1)
 		{
 			foreach ($shops as $shop)
 			{
