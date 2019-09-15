@@ -1,7 +1,9 @@
-<?php require_once('html/header.php') ?>
-<?php require_once('startup.php'); ?>
 <?php
-	$files = get_files();
+
+require_once('html/header.php');
+require_once('startup.php');
+
+$files = get_files();
 ?>
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 
@@ -12,18 +14,33 @@
 	<div class="row">
 		<div class="col-md-6">
 			<p>
-				This generator is very simple. It will generate 50% items and 50% matrix items. <br />
-				Each row is going to be unique.
+				This generator is very simple. It will generate your choice of single and matrix items<br />
+				Each row is going to be unique. <br />
+				Matrix items will contain random attribute sets from Color,Size,Color/Size and 3 Attributes (not custom ones yet)
 			</p>
 			<hr />
-			<form method="POST" action="import_generator.php">
+			<form method="POST" action="requests/import/GenerateImport.php">
 				<div class="form-group">
-					<label for="exampleInputEmail1">Number of rows</label>
-					<input type="number" max="10000" min="2" class="form-control" id="rows" name="rows" placeholder="2-10000">
-					<small id="rows-help" class="form-text text-muted">How many rows do you want in your import file</small>
+					<label for="account">Select your retail account</label>
+					<select class="form-control" id="account" name="account">
+						<option value="-1" selected>None (default)</option>
+						<?php foreach ($accountService->getAccounts() as $account) : ?>
+							<option value="<?=$account['cust_customer_id']?>"><?=$account['name']?></option>
+						<?php endforeach; ?>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="single_count">Number of single items</label>
+					<input type="number" max="10000" min="0" class="form-control" id="single_count" name="single_count" placeholder="0-10000">
+					<small id="single_count-help" class="form-text text-muted">How many single items to generate</small>
+				</div>
+				<div class="form-group">
+					<label for="matrix_count">Number of matrix items</label>
+					<input type="number" max="10000" min="0" class="form-control" id="matrix_count" name="matrix_count" placeholder="0-10000">
+					<small id="matrix_count-help" class="form-text text-muted">How many matrix items to generate</small>
 				</div>
 
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button type="submit" class="btn btn-primary">Create file</button>
 			</form>
 		</div>
 		<div class="col-md-4 offset-md-1">

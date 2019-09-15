@@ -11,3 +11,8 @@ services:
       - 7331:80
     volumes:
       - .:/web/app
+
+networks:
+  lightspeed:
+    external:
+      name: lightspeed
