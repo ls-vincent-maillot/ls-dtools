@@ -5,6 +5,7 @@ require_once("../../startup.php");
 $single_count = intval($_POST['single_count']);
 $matrix_count = intval($_POST['matrix_count']);
 $account = intval($_POST['account']);
+$filename = isset($_POST['filename']) ? $_POST['filename'] : "";
 /*
  * 
 
@@ -31,4 +32,4 @@ else
  */
 $shops = [];
 $importService = new ImportService();
-$importService->generateFile($shops, $single_count, $matrix_count);
+$importService->generateFile($shops, $single_count, $matrix_count, $filename);

@@ -28,6 +28,11 @@ $files = get_files();
 					</select>
 				</div>
 				<div class="form-group">
+					<label for="filename">Filename</label>
+					<input type="text" class="form-control" id="filename" name="filename">
+					<small id="filename-help" class="form-text text-muted">Filename (without extension)</small>
+				</div>
+				<div class="form-group">
 					<label for="single_count">Number of single items</label>
 					<input type="number" max="50000" min="0" class="form-control" id="single_count" name="single_count" placeholder="0-10000">
 					<small id="single_count-help" class="form-text text-muted">How many single items to generate</small>
