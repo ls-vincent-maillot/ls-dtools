@@ -24,19 +24,17 @@ $files = get_files();
 					<label for="account">Select your retail account</label>
 					<select class="form-control" id="account" name="account">
 						<option value="-1" selected>None (default)</option>
-						<?php foreach ($accountService->getAccounts() as $account) : ?>
-							<option value="<?=$account['cust_customer_id']?>"><?=$account['name']?></option>
-						<?php endforeach; ?>
+					
 					</select>
 				</div>
 				<div class="form-group">
 					<label for="single_count">Number of single items</label>
-					<input type="number" max="10000" min="0" class="form-control" id="single_count" name="single_count" placeholder="0-10000">
+					<input type="number" max="50000" min="0" class="form-control" id="single_count" name="single_count" placeholder="0-10000">
 					<small id="single_count-help" class="form-text text-muted">How many single items to generate</small>
 				</div>
 				<div class="form-group">
 					<label for="matrix_count">Number of matrix items</label>
-					<input type="number" max="10000" min="0" class="form-control" id="matrix_count" name="matrix_count" placeholder="0-10000">
+					<input type="number" max="50000" min="0" class="form-control" id="matrix_count" name="matrix_count" placeholder="0-10000">
 					<small id="matrix_count-help" class="form-text text-muted">How many matrix items to generate</small>
 				</div>
 

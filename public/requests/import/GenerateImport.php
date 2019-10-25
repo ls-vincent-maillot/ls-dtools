@@ -5,6 +5,9 @@ require_once("../../startup.php");
 $single_count = intval($_POST['single_count']);
 $matrix_count = intval($_POST['matrix_count']);
 $account = intval($_POST['account']);
+/*
+ * 
+
 if ($account > 0)
 {
 	$name = $accountService->getAccountDBName($account);
@@ -25,6 +28,7 @@ else
 {
 	$shops = [];
 }
-
+ */
+$shops = [];
 $importService = new ImportService();
 $importService->generateFile($shops, $single_count, $matrix_count);

@@ -13,6 +13,6 @@ services:
       - .:/web/app
 
 networks:
-  lightspeed:
+  default:
     external:
       name: lightspeed

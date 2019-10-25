@@ -30,6 +30,9 @@ function write_file(string $filename, string $data)
 	fclose($handle);
 }
 
+/*
+ * 
+
 $pdo = new PDO('mysql:host=rad.localdev;dbname=customer', "root", "root");
 $structure = new NotORM_Structure_Convention(
 	$primary = "%s_id", // $table_id
@@ -39,3 +42,4 @@ $structure = new NotORM_Structure_Convention(
 );
 $customer_db = new NotORM($pdo, $structure);
 $accountService = new AccountService($customer_db);
+ */
