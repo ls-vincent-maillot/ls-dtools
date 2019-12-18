@@ -3,28 +3,25 @@
 class ImportService
 {
 	public function generateFile(
-		array $shops,
-		int $single_count,
-		int $matrix_count,
-		string $filename
+		FileConfig $config
 	) {
-		$generator = new ImportGenerator();
-		$data = $generator->generate($shops, $single_count, $matrix_count);
+		$generator = new ImportGenerator($config);
+		$data = $generator->generate();
 		
-		if($filename == "")
+		if($config->filename == "")
 		{
 			$filename = sprintf(
 				"%s_import_data_%d_%d_rows.csv",
 				uniqid(),
-				$single_count,
-				$matrix_count
+				$config->single_count,
+				$config->matrix_count
 			);	
 		}
 		else
 		{
 			$filename = sprintf(
 				"%s.csv",
-				$filename
+				$config->filename
 			);
 		}
 		
